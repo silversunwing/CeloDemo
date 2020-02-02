@@ -13,7 +13,9 @@ Write an iOS application using Swift and UIKit that fetches users from the publi
 
 ■ Thumbnail
 
-■ Title and names ■ Gender
+■ Title and names 
+
+■ Gender
 
 ■ Date of birth
 
@@ -22,6 +24,7 @@ Write an iOS application using Swift and UIKit that fetches users from the publi
 
 ● Once tap on one user in the list, a detailed view should present more information about
 the selected user, including a full-sized profile image.
+
 ● After the user data is fetched, local storage of the user data is essential, as this app has
 to work offline.
 
@@ -31,7 +34,9 @@ The following are a few technical suggestions:
 
 ● Since the app is required to work offline, local storage (SqlLite) is prefered, and also
 ORM such as CoreData
+
 The important things we are looking for
+
 ● Good coding standard
 ● Maintainable application architecture
 ● Testing
