@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  CeloDemo
 //
 //  Created by Crunchyiee on 2/02/20.
@@ -7,22 +7,34 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MainViewController: UIViewController {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
-    }
+    @IBOutlet weak var listTableView: UITableView!
+    var userdb:[[String:Any]] = []
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let usernib = UINib.init(nibName: UserCellReuseIdentifier, bundle: nil)
+        self.listTableView.register(usernib, forCellReuseIdentifier: UserCellReuseIdentifier)
+        
+        if (user_fetched != nil) {
+            APIHandler.sharedInstance.fetchDB()
+        }
+        else{
+            APIHandler.sharedInstance.fetchData(10) { (Code,db) in
+                for val in db{
+                    self.userdb.append(val)
+                }
+                self.listTableView.reloadData()
+            }
+        }
+        
+        
     }
-
+    
 }
 

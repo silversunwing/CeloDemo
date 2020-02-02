@@ -3,19 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B042A86AFA0001ED60BB298 /* Pods_CeloDemo_CeloDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EA1056DD9D10A944758DC2 /* Pods_CeloDemo_CeloDemoUITests.framework */; };
+		85CDD4FC7E06B13B5D8571EB /* Pods_CeloDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A27935E36C81B297D06FB19 /* Pods_CeloDemo.framework */; };
+		8FA15F3E6E37898381F4AFA9 /* Pods_CeloDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74879371FB21D3A0B101C28C /* Pods_CeloDemoTests.framework */; };
 		FA53711023E6420600BA878C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA53710F23E6420600BA878C /* AppDelegate.swift */; };
 		FA53711223E6420600BA878C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA53711123E6420600BA878C /* SceneDelegate.swift */; };
-		FA53711423E6420600BA878C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA53711323E6420600BA878C /* ViewController.swift */; };
+		FA53711423E6420600BA878C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA53711323E6420600BA878C /* MainViewController.swift */; };
 		FA53711723E6420600BA878C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA53711523E6420600BA878C /* Main.storyboard */; };
 		FA53711A23E6420600BA878C /* CeloDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA53711823E6420600BA878C /* CeloDemo.xcdatamodeld */; };
 		FA53711C23E6420B00BA878C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA53711B23E6420B00BA878C /* Assets.xcassets */; };
 		FA53711F23E6420B00BA878C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA53711D23E6420B00BA878C /* LaunchScreen.storyboard */; };
 		FA53712A23E6420B00BA878C /* CeloDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA53712923E6420B00BA878C /* CeloDemoTests.swift */; };
 		FA53713523E6420B00BA878C /* CeloDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA53713423E6420B00BA878C /* CeloDemoUITests.swift */; };
+		FA53714923E6551300BA878C /* MainVC_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA53714823E6551300BA878C /* MainVC_Extension.swift */; };
+		FA53714B23E6566D00BA878C /* listcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA53714A23E6566D00BA878C /* listcell.xib */; };
+		FA53714D23E65A0900BA878C /* UserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA53714C23E65A0900BA878C /* UserListCell.swift */; };
+		FA53714F23E65D1500BA878C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA53714E23E65D1500BA878C /* Constants.swift */; };
+		FA53715123E66BEA00BA878C /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA53715023E66BEA00BA878C /* APIHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,21 +44,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A27935E36C81B297D06FB19 /* Pods_CeloDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CeloDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		58EA1056DD9D10A944758DC2 /* Pods_CeloDemo_CeloDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CeloDemo_CeloDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60A808180CB00C213980602B /* Pods-CeloDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CeloDemo.release.xcconfig"; path = "Target Support Files/Pods-CeloDemo/Pods-CeloDemo.release.xcconfig"; sourceTree = "<group>"; };
+		74879371FB21D3A0B101C28C /* Pods_CeloDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CeloDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D19CED9B4F5F3F6FDCFAD19 /* Pods-CeloDemo-CeloDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CeloDemo-CeloDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-CeloDemo-CeloDemoUITests/Pods-CeloDemo-CeloDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		94F3E60B9128096C6EF39637 /* Pods-CeloDemo-CeloDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CeloDemo-CeloDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-CeloDemo-CeloDemoUITests/Pods-CeloDemo-CeloDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A73438D30013190B5979458D /* Pods-CeloDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CeloDemoTests.release.xcconfig"; path = "Target Support Files/Pods-CeloDemoTests/Pods-CeloDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		C7B6BDF609C4E293BC15D20F /* Pods-CeloDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CeloDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-CeloDemoTests/Pods-CeloDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DA97DA4D1FBBA58949FF8E87 /* Pods-CeloDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CeloDemo.debug.xcconfig"; path = "Target Support Files/Pods-CeloDemo/Pods-CeloDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		FA53710C23E6420600BA878C /* CeloDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CeloDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA53710F23E6420600BA878C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA53711123E6420600BA878C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FA53711323E6420600BA878C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA53711323E6420600BA878C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FA53711623E6420600BA878C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA53711923E6420600BA878C /* CeloDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CeloDemo.xcdatamodel; sourceTree = "<group>"; };
 		FA53711B23E6420B00BA878C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA53711E23E6420B00BA878C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FA53712023E6420B00BA878C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA53712523E6420B00BA878C /* CeloDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CeloDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA53712923E6420B00BA878C /* CeloDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeloDemoTests.swift; sourceTree = "<group>"; };
 		FA53712B23E6420B00BA878C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA53713023E6420B00BA878C /* CeloDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CeloDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA53713423E6420B00BA878C /* CeloDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeloDemoUITests.swift; sourceTree = "<group>"; };
 		FA53713623E6420B00BA878C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA53714823E6551300BA878C /* MainVC_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC_Extension.swift; sourceTree = "<group>"; };
+		FA53714A23E6566D00BA878C /* listcell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = listcell.xib; sourceTree = "<group>"; };
+		FA53714C23E65A0900BA878C /* UserListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCell.swift; sourceTree = "<group>"; };
+		FA53714E23E65D1500BA878C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FA53715023E66BEA00BA878C /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85CDD4FC7E06B13B5D8571EB /* Pods_CeloDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FA15F3E6E37898381F4AFA9 /* Pods_CeloDemoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +95,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B042A86AFA0001ED60BB298 /* Pods_CeloDemo_CeloDemoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D84B73DD8EFF6FAACBE221A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A27935E36C81B297D06FB19 /* Pods_CeloDemo.framework */,
+				58EA1056DD9D10A944758DC2 /* Pods_CeloDemo_CeloDemoUITests.framework */,
+				74879371FB21D3A0B101C28C /* Pods_CeloDemoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6F10368441A9E7C9D7661507 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA97DA4D1FBBA58949FF8E87 /* Pods-CeloDemo.debug.xcconfig */,
+				60A808180CB00C213980602B /* Pods-CeloDemo.release.xcconfig */,
+				7D19CED9B4F5F3F6FDCFAD19 /* Pods-CeloDemo-CeloDemoUITests.debug.xcconfig */,
+				94F3E60B9128096C6EF39637 /* Pods-CeloDemo-CeloDemoUITests.release.xcconfig */,
+				C7B6BDF609C4E293BC15D20F /* Pods-CeloDemoTests.debug.xcconfig */,
+				A73438D30013190B5979458D /* Pods-CeloDemoTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FA53710323E6420600BA878C = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +132,8 @@
 				FA53712823E6420B00BA878C /* CeloDemoTests */,
 				FA53713323E6420B00BA878C /* CeloDemoUITests */,
 				FA53710D23E6420600BA878C /* Products */,
+				6F10368441A9E7C9D7661507 /* Pods */,
+				2D84B73DD8EFF6FAACBE221A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +150,13 @@
 		FA53710E23E6420600BA878C /* CeloDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FA53714423E651E200BA878C /* UserList */,
+				FA53711B23E6420B00BA878C /* Assets.xcassets */,
+				FA53715223E66BEE00BA878C /* Utilities */,
+				FA53714523E651FB00BA878C /* db */,
 				FA53710F23E6420600BA878C /* AppDelegate.swift */,
 				FA53711123E6420600BA878C /* SceneDelegate.swift */,
-				FA53711323E6420600BA878C /* ViewController.swift */,
-				FA53711523E6420600BA878C /* Main.storyboard */,
-				FA53711B23E6420B00BA878C /* Assets.xcassets */,
 				FA53711D23E6420B00BA878C /* LaunchScreen.storyboard */,
-				FA53712023E6420B00BA878C /* Info.plist */,
-				FA53711823E6420600BA878C /* CeloDemo.xcdatamodeld */,
 			);
 			path = CeloDemo;
 			sourceTree = "<group>";
@@ -131,6 +179,51 @@
 			path = CeloDemoUITests;
 			sourceTree = "<group>";
 		};
+		FA53714223E643A200BA878C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA53711523E6420600BA878C /* Main.storyboard */,
+				FA53714A23E6566D00BA878C /* listcell.xib */,
+				FA53714C23E65A0900BA878C /* UserListCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA53714323E643AC00BA878C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA53711323E6420600BA878C /* MainViewController.swift */,
+				FA53714823E6551300BA878C /* MainVC_Extension.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA53714423E651E200BA878C /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				FA53714323E643AC00BA878C /* Controller */,
+				FA53714223E643A200BA878C /* View */,
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		FA53714523E651FB00BA878C /* db */ = {
+			isa = PBXGroup;
+			children = (
+				FA53711823E6420600BA878C /* CeloDemo.xcdatamodeld */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
+		FA53715223E66BEE00BA878C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FA53714E23E65D1500BA878C /* Constants.swift */,
+				FA53715023E66BEA00BA878C /* APIHandler.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +231,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA53713923E6420B00BA878C /* Build configuration list for PBXNativeTarget "CeloDemo" */;
 			buildPhases = (
+				1706A57AF3C31F60BE816006 /* [CP] Check Pods Manifest.lock */,
 				FA53710823E6420600BA878C /* Sources */,
 				FA53710923E6420600BA878C /* Frameworks */,
 				FA53710A23E6420600BA878C /* Resources */,
+				2530D81DA45CCFCA7D2BE9D2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +250,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA53713C23E6420B00BA878C /* Build configuration list for PBXNativeTarget "CeloDemoTests" */;
 			buildPhases = (
+				89CFDFDB3EF92E57F9D25FD4 /* [CP] Check Pods Manifest.lock */,
 				FA53712123E6420B00BA878C /* Sources */,
 				FA53712223E6420B00BA878C /* Frameworks */,
 				FA53712323E6420B00BA878C /* Resources */,
@@ -173,9 +269,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA53713F23E6420B00BA878C /* Build configuration list for PBXNativeTarget "CeloDemoUITests" */;
 			buildPhases = (
+				5FAAE50AC3348176AAB818AC /* [CP] Check Pods Manifest.lock */,
 				FA53712C23E6420B00BA878C /* Sources */,
 				FA53712D23E6420B00BA878C /* Frameworks */,
 				FA53712E23E6420B00BA878C /* Resources */,
+				AE33BDCCE09138649147D60D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,6 +333,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA53714B23E6566D00BA878C /* listcell.xib in Resources */,
 				FA53711F23E6420B00BA878C /* LaunchScreen.storyboard in Resources */,
 				FA53711C23E6420B00BA878C /* Assets.xcassets in Resources */,
 				FA53711723E6420600BA878C /* Main.storyboard in Resources */,
@@ -257,14 +356,121 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1706A57AF3C31F60BE816006 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CeloDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2530D81DA45CCFCA7D2BE9D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CeloDemo/Pods-CeloDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CeloDemo/Pods-CeloDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CeloDemo/Pods-CeloDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FAAE50AC3348176AAB818AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CeloDemo-CeloDemoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89CFDFDB3EF92E57F9D25FD4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CeloDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE33BDCCE09138649147D60D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CeloDemo-CeloDemoUITests/Pods-CeloDemo-CeloDemoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CeloDemo-CeloDemoUITests/Pods-CeloDemo-CeloDemoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CeloDemo-CeloDemoUITests/Pods-CeloDemo-CeloDemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FA53710823E6420600BA878C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA53711423E6420600BA878C /* ViewController.swift in Sources */,
+				FA53711423E6420600BA878C /* MainViewController.swift in Sources */,
 				FA53711A23E6420600BA878C /* CeloDemo.xcdatamodeld in Sources */,
+				FA53714D23E65A0900BA878C /* UserListCell.swift in Sources */,
+				FA53715123E66BEA00BA878C /* APIHandler.swift in Sources */,
 				FA53711023E6420600BA878C /* AppDelegate.swift in Sources */,
+				FA53714F23E65D1500BA878C /* Constants.swift in Sources */,
+				FA53714923E6551300BA878C /* MainVC_Extension.swift in Sources */,
 				FA53711223E6420600BA878C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,6 +576,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -424,6 +631,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -436,6 +644,7 @@
 		};
 		FA53713A23E6420B00BA878C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA97DA4D1FBBA58949FF8E87 /* Pods-CeloDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,6 +663,7 @@
 		};
 		FA53713B23E6420B00BA878C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60A808180CB00C213980602B /* Pods-CeloDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -472,6 +682,7 @@
 		};
 		FA53713D23E6420B00BA878C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7B6BDF609C4E293BC15D20F /* Pods-CeloDemoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -494,6 +705,7 @@
 		};
 		FA53713E23E6420B00BA878C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A73438D30013190B5979458D /* Pods-CeloDemoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -516,6 +728,7 @@
 		};
 		FA53714023E6420B00BA878C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D19CED9B4F5F3F6FDCFAD19 /* Pods-CeloDemo-CeloDemoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -536,6 +749,7 @@
 		};
 		FA53714123E6420B00BA878C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94F3E60B9128096C6EF39637 /* Pods-CeloDemo-CeloDemoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

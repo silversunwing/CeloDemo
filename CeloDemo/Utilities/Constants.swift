@@ -7,3 +7,6 @@
 //
 
 import Foundation
+
+let user_fetched = UserDefaults.standard.data(forKey: "datafetch")
+let UserCellReuseIdentifier = "listcell"

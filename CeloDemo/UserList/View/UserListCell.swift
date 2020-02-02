@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class UserListCell: UIView {
+class UserListCell: UITableViewCell {
     @IBOutlet weak var thumb_img: UIImageView!
     @IBOutlet weak var usr_name: UILabel!
     @IBOutlet weak var usr_gender: UILabel!

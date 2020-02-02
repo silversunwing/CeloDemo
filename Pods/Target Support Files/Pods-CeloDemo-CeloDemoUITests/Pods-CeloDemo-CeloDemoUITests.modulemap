@@ -1,0 +1,6 @@
+framework module Pods_CeloDemo_CeloDemoUITests {
+  umbrella header "Pods-CeloDemo-CeloDemoUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
