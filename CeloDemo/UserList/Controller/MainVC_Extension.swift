@@ -20,17 +20,14 @@ extension MainViewController : UITableViewDataSource, UITableViewDelegate {
         
         let cell = self.listTableView.dequeueReusableCell(withIdentifier: UserCellReuseIdentifier, for: indexPath) as! UserListCell
         
-        let img = userdb[indexPath.row]["picture"] as? [String:String]
-        let thumbimg = URL(string: "\((img?["thumbnail"])!)")
+        let thumbimg = URL(string: "\((userdb[indexPath.row]["thumbimg"])!)")
         cell.thumb_img.sd_setImage(with: thumbimg, completed: nil)
         
-        let nm = userdb[indexPath.row]["name"] as? [String:String]
-        cell.usr_name.text = "\((nm?["title"])!) \((nm?["first"])!) \((nm?["last"])!)"
+        cell.usr_name.text = "\((userdb[indexPath.row]["title"])!) \((userdb[indexPath.row]["f_name"])!) \((userdb[indexPath.row]["l_name"])!)"
         
         cell.usr_gender.text = "\((userdb[indexPath.row]["gender"])!)"
         
-        let dob = userdb[indexPath.row]["dob"] as? [String:Any]
-        cell.usr_dob.text = "\((dob?["date"])!)"
+        cell.usr_dob.text = "\(userdb[indexPath.row]["dob"] ?? "")"
         return cell
         
     }

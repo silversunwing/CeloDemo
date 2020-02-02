@@ -24,6 +24,7 @@
 		FA53714D23E65A0900BA878C /* UserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA53714C23E65A0900BA878C /* UserListCell.swift */; };
 		FA53714F23E65D1500BA878C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA53714E23E65D1500BA878C /* Constants.swift */; };
 		FA53715123E66BEA00BA878C /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA53715023E66BEA00BA878C /* APIHandler.swift */; };
+		FA53715823E6ABC100BA878C /* DBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA53715723E6ABC100BA878C /* DBHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		FA53714C23E65A0900BA878C /* UserListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCell.swift; sourceTree = "<group>"; };
 		FA53714E23E65D1500BA878C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FA53715023E66BEA00BA878C /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
+		FA53715723E6ABC100BA878C /* DBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +222,7 @@
 			children = (
 				FA53714E23E65D1500BA878C /* Constants.swift */,
 				FA53715023E66BEA00BA878C /* APIHandler.swift */,
+				FA53715723E6ABC100BA878C /* DBHandler.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				FA53711423E6420600BA878C /* MainViewController.swift in Sources */,
 				FA53711A23E6420600BA878C /* CeloDemo.xcdatamodeld in Sources */,
 				FA53714D23E65A0900BA878C /* UserListCell.swift in Sources */,
+				FA53715823E6ABC100BA878C /* DBHandler.swift in Sources */,
 				FA53715123E66BEA00BA878C /* APIHandler.swift in Sources */,
 				FA53711023E6420600BA878C /* AppDelegate.swift in Sources */,
 				FA53714F23E65D1500BA878C /* Constants.swift in Sources */,

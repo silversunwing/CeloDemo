@@ -8,5 +8,6 @@
 
 import Foundation
 
-let user_fetched = UserDefaults.standard.data(forKey: "datafetch")
+let userAPI = "https://randomuser.me/api/"
+let user_fetched = UserDefaults.standard.value(forKey: "datafetch")
 let UserCellReuseIdentifier = "listcell"

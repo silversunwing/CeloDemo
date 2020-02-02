@@ -14,8 +14,8 @@
             filePath = "CeloDemo/UserList/Controller/MainViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -158,42 +158,10 @@
             filePath = "CeloDemo/UserList/Controller/MainVC_Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "934E00EC-FE57-4815-A58F-337CF2732AA1 - 75a273fedb5df731"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CeloDemo.MainViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
-                  moduleName = "CeloDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Silversunwing/Desktop/Projects/CeloDemo/CeloDemo/UserList/Controller/MainVC_Extension.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "7505">
-               </Location>
-               <Location
-                  uuid = "934E00EC-FE57-4815-A58F-337CF2732AA1 - 75a273fedb5df731"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CeloDemo.MainViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
-                  moduleName = "CeloDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Silversunwing/Desktop/Projects/CeloDemo/CeloDemo/UserList/Controller/MainVC_Extension.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "8930">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

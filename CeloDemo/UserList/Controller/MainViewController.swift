@@ -22,12 +22,39 @@ class MainViewController: UIViewController {
         self.listTableView.register(usernib, forCellReuseIdentifier: UserCellReuseIdentifier)
         
         if (user_fetched != nil) {
-            APIHandler.sharedInstance.fetchDB()
+            userdb = DBHandler.sharedInstance.fetchData()
         }
         else{
             APIHandler.sharedInstance.fetchData(10) { (Code,db) in
                 for val in db{
-                    self.userdb.append(val)
+                    
+                    let img = val["picture"] as? [String:String]
+                    let thumbimg = "\((img!["thumbnail"])!)"
+                    let profileimg = "\((img!["large"])!)"
+                    
+                    let nm = val["name"] as? [String:String]
+                    let title = "\((nm!["title"])!)"
+                    let fname = "\((nm!["first"])!)"
+                    let lname = "\((nm!["last"])!)"
+                    
+                    let gen = "\((val["gender"])!)"
+                    
+                    let dob = val["dob"] as? [String:Any]
+                    let date = "\((dob!["date"])!)"
+                    
+                    let newdb = ["thumbimg":thumbimg,
+                              "profileimg":profileimg,
+                              "title":title,
+                              "f_name":fname,
+                              "l_name":lname,
+                              "gender":gen,
+                              "dob":date]
+                    
+                    DBHandler.sharedInstance.openDatabase(newdb: newdb)
+                    self.userdb = DBHandler.sharedInstance.fetchData()
+                    
+                    UserDefaults.standard.setValue("fetched", forKey: "datafetch")
+                    UserDefaults.standard.synchronize()
                 }
                 self.listTableView.reloadData()
             }

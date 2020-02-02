@@ -22,7 +22,7 @@ class APIHandler{
     }
     
     func fetchData(_ size:Int, withContextHandler contexthandler: @escaping (Int,[[String:Any]]) -> Void){
-        let url = URL(string: "https://randomuser.me/api/")!
+        let url = URL(string: userAPI)!
         for _ in 1...size{
             Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseJSON { (responseJson) in
                 if let resp = responseJson.response{
