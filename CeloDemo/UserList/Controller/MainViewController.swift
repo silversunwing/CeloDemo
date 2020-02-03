@@ -9,20 +9,32 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import SVProgressHUD
 
 class MainViewController: UIViewController {
     
     @IBOutlet weak var listTableView: UITableView!
     var userdb:[[String:Any]] = []
+    var usersDB = [Users]()
+    var filteredUsers = [Users]()
+    let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        listTableView.tableHeaderView = searchController.searchBar
+        
         let usernib = UINib.init(nibName: UserCellReuseIdentifier, bundle: nil)
         self.listTableView.register(usernib, forCellReuseIdentifier: UserCellReuseIdentifier)
         
+//        SVProgressHUD.show()
         if (user_fetched != nil) {
-            userdb = DBHandler.sharedInstance.fetchData()
+            userdb = DBHandler.sharedInstance.fetchData().0
+            usersDB = DBHandler.sharedInstance.fetchData().1
+            
         }
         else{
             APIHandler.sharedInstance.fetchData(10) { (Code,db) in
@@ -51,17 +63,30 @@ class MainViewController: UIViewController {
                               "dob":date]
                     
                     DBHandler.sharedInstance.openDatabase(newdb: newdb)
-                    self.userdb = DBHandler.sharedInstance.fetchData()
+                    self.userdb = DBHandler.sharedInstance.fetchData().0
+                    self.usersDB = DBHandler.sharedInstance.fetchData().1
                     
                     UserDefaults.standard.setValue("fetched", forKey: "datafetch")
                     UserDefaults.standard.synchronize()
                 }
+//                SVProgressHUD.dismiss()
                 self.listTableView.reloadData()
             }
         }
         
-        
+    }
+    
+    private func filterUsers(for searchText: String) {
+      filteredUsers = usersDB.filter { usr in
+        return usr.f_name.lowercased().contains(searchText.lowercased())
+      }
+      listTableView.reloadData()
     }
     
 }
 
+extension MainViewController: UISearchResultsUpdating {
+  func updateSearchResults(for searchController: UISearchController) {
+    filterUsers(for: searchController.searchBar.text ?? "")
+  }
+}

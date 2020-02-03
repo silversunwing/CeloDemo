@@ -45,13 +45,14 @@ class DBHandler{
         }
     }
     
-    func fetchData() -> [[String:String]]
+    func fetchData() -> ([[String:String]], [Users])
     {
         context = appDelegate.persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "UserDetails", in: context)
         let newUser = NSManagedObject(entity: entity!, insertInto: context)
         
         var fetcheddb:[[String:String]] = []
+        var usrDB:[Users] = []
         print("Fetching...")
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "UserDetails")
         request.returnsObjectsAsFaults = false
@@ -74,11 +75,13 @@ class DBHandler{
                                       "l_name":l_name,
                                       "gender":gender,
                                       "dob":dob])
+                    
+                    usrDB.append(Users.init(title: title, f_name: f_name, l_name: l_name, gender: gender, dob: dob, thumbimg: thumbimg, profileimg: profileimg))
                 }
             }
         } catch {
             print("Fetching Failed")
         }
-         return fetcheddb
+         return (fetcheddb, usrDB)
     }
 }

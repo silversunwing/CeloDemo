@@ -7,22 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7E6D14DF-BECA-4FBE-8F02-A2F62972F87C"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CeloDemo/UserList/Controller/MainViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "B740DA4D-F650-45C1-A9EB-124F5C6E5D87"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -151,17 +135,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "934E00EC-FE57-4815-A58F-337CF2732AA1"
+            uuid = "9B866D24-3972-42D5-805B-34F1618F23E4"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CeloDemo/UserList/Controller/MainVC_Extension.swift"
+            filePath = "CeloDemo/UserList/Controller/MainViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "filterUsers(for:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9B866D24-3972-42D5-805B-34F1618F23E4 - ca0161a1f5464999"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CeloDemo.MainViewController.(filterUsers in _C9A64B7D24D3702983F2D6A497C69B44)(for: Swift.String) -&gt; ()"
+                  moduleName = "CeloDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Silversunwing/Desktop/Projects/CeloDemo/CeloDemo/UserList/Controller/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "46">
+               </Location>
+               <Location
+                  uuid = "9B866D24-3972-42D5-805B-34F1618F23E4 - 325e5339d615b212"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (CeloDemo.Users) -&gt; Swift.Bool in CeloDemo.MainViewController.(filterUsers in _C9A64B7D24D3702983F2D6A497C69B44)(for: Swift.String) -&gt; ()"
+                  moduleName = "CeloDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Silversunwing/Desktop/Projects/CeloDemo/CeloDemo/UserList/Controller/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

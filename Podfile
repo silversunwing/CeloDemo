@@ -9,7 +9,7 @@ target 'CeloDemo' do
 	pod 'Alamofire'
 	pod 'SwiftyJSON', '~> 4.0'
 	pod 'SDWebImage', '~> 5.0'
-
+  pod 'SVProgressHUD'
 
   target 'CeloDemoTests' do
     inherit! :search_paths

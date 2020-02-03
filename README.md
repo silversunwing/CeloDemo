@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 # CeloDemo
 =======
-# CeloDemo Requirement
 
-Celo Practical Challenge
+Practical Challenge
 
 This practical challenge is intended for candidates to demonstrate technical capabilities. Please complete as much as possible and submit your work within 3 days of receiving the request. You can submit your work by email with a zip attachment or a public repo. Our in-person interview will heavily base on the work you have done for this challenge.
 
@@ -41,7 +39,8 @@ ORM such as CoreData
 The important things we are looking for
 
 ● Good coding standard
+
 ● Maintainable application architecture
+
 ● Testing
- 
->>>>>>> a32f9ef46164384151b0645dca614f4772373d0c
+
