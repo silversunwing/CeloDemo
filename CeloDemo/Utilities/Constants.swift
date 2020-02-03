@@ -11,3 +11,4 @@ import Foundation
 let userAPI = "https://randomuser.me/api/"
 let user_fetched = UserDefaults.standard.value(forKey: "datafetch")
 let UserCellReuseIdentifier = "listcell"
+let dbSize = 3000

@@ -17,6 +17,7 @@ class MainViewController: UIViewController {
     var userdb:[[String:Any]] = []
     var usersDB = [Users]()
     var filteredUsers = [Users]()
+    var dbasesize = 0
     let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
@@ -37,43 +38,49 @@ class MainViewController: UIViewController {
             
         }
         else{
-            APIHandler.sharedInstance.fetchData(10) { (Code,db) in
-                for val in db{
-                    
-                    let img = val["picture"] as? [String:String]
-                    let thumbimg = "\((img!["thumbnail"])!)"
-                    let profileimg = "\((img!["large"])!)"
-                    
-                    let nm = val["name"] as? [String:String]
-                    let title = "\((nm!["title"])!)"
-                    let fname = "\((nm!["first"])!)"
-                    let lname = "\((nm!["last"])!)"
-                    
-                    let gen = "\((val["gender"])!)"
-                    
-                    let dob = val["dob"] as? [String:Any]
-                    let date = "\((dob!["date"])!)"
-                    
-                    let newdb = ["thumbimg":thumbimg,
-                              "profileimg":profileimg,
-                              "title":title,
-                              "f_name":fname,
-                              "l_name":lname,
-                              "gender":gen,
-                              "dob":date]
-                    
-                    DBHandler.sharedInstance.openDatabase(newdb: newdb)
-                    self.userdb = DBHandler.sharedInstance.fetchData().0
-                    self.usersDB = DBHandler.sharedInstance.fetchData().1
-                    
-                    UserDefaults.standard.setValue("fetched", forKey: "datafetch")
-                    UserDefaults.standard.synchronize()
-                }
-//                SVProgressHUD.dismiss()
-                self.listTableView.reloadData()
-            }
+            fetchAPI()
         }
         
+    }
+    
+    func fetchAPI(){
+        //fetching data
+                    APIHandler.sharedInstance.fetchData(10) { (Code,db) in
+                        for val in db{
+                            
+                            let img = val["picture"] as? [String:String]
+                            let thumbimg = "\((img!["thumbnail"])!)"
+                            let profileimg = "\((img!["large"])!)"
+                            
+                            let nm = val["name"] as? [String:String]
+                            let title = "\((nm!["title"])!)"
+                            let fname = "\((nm!["first"])!)"
+                            let lname = "\((nm!["last"])!)"
+                            
+                            let gen = "\((val["gender"])!)"
+                            
+                            let dob = val["dob"] as? [String:Any]
+                            let date = "\((dob!["date"])!)"
+                            
+                            let newdb = ["thumbimg":thumbimg,
+                                      "profileimg":profileimg,
+                                      "title":title,
+                                      "f_name":fname,
+                                      "l_name":lname,
+                                      "gender":gen,
+                                      "dob":date]
+                            
+                            DBHandler.sharedInstance.openDatabase(newdb: newdb)
+                            self.userdb = DBHandler.sharedInstance.fetchData().0
+                            self.usersDB = DBHandler.sharedInstance.fetchData().1
+                            
+                            UserDefaults.standard.setValue("fetched", forKey: "datafetch")
+                            UserDefaults.standard.synchronize()
+                        }
+        //                SVProgressHUD.dismiss()
+                        self.listTableView.reloadData()
+                    }
+        self.dbasesize += 10
     }
     
     private func filterUsers(for searchText: String) {

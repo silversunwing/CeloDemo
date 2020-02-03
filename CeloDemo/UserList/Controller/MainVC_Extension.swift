@@ -21,6 +21,10 @@ extension MainViewController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        if ((indexPath.row == self.userdb.count - 1) || (indexPath.row == self.filteredUsers.count - 1) && dbasesize<=dbSize) {
+            fetchAPI()
+        }
+        
         let cell = self.listTableView.dequeueReusableCell(withIdentifier: UserCellReuseIdentifier, for: indexPath) as! UserListCell
         
         
@@ -60,6 +64,7 @@ extension MainViewController : UITableViewDataSource, UITableViewDelegate {
         
         self.navigationController?.pushViewController(vc!, animated: true)
     }
+    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90
